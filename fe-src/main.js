@@ -9,7 +9,7 @@ import TweenMax from 'TweenMax';
 
 let data = null;
 
-const getJSONData = function (){
+const bootstrapApp = function (){
     $.ajax({
         dataType: "json",
         url: 'assets/data.json',
@@ -23,7 +23,7 @@ const getJSONData = function (){
     });
 };
 
-getJSONData();
+bootstrapApp();
 
 
 let App =  {
