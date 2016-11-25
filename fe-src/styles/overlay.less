@@ -1,0 +1,180 @@
+@import "colors";
+@import "breakpoints";
+
+#overlay-wrap {
+
+  opacity: 0;
+
+#tpl-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: @white;
+  z-index: 99;
+
+  .overlay-header {
+    width: 100%;
+    background: @gray;
+    height: 115px;
+    display: flex;
+    justify-content: center;
+
+    @media @mobile, @mobile_small {
+      height: 70px;
+    }
+
+  }
+
+  .overlay-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .video-title {
+      margin-top: -50px;
+
+      h2 {
+        font-size: 6rem;
+        color: @blue;
+        text-decoration: line-through;
+        margin: 0;
+
+        @media @mobile {
+          font-size: 5rem;
+        }
+
+        @media @mobile_small {
+          font-size: 2.5rem;
+        }
+
+        span {
+          color: @black;
+          font-family: 'Source Sans Pro', sans-serif;
+        }
+      }
+    }
+
+    .video-wrap {
+      width: 100%;
+      display: flex;
+      margin-top: 70px;
+
+      @media @mobile, @mobile_small, @tablet {
+        margin-top: 70px;
+      }
+
+      &-nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 25%;
+
+        @media @tablet {
+          width: 20%;
+        }
+
+        @media @mobile_small, @mobile {
+          display: none;
+        }
+
+        a {
+
+          font-size: 8.3rem;
+          text-decoration: none;
+          color: @black;
+          width: 100%;
+          height: 100%;
+          cursor: pointer;
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          transition: all 0.2s ease-in-out;
+
+          &:hover {
+            font-size: 10rem;
+          }
+        }
+      }
+      .embedded-video-wrap {
+        width: 50%;
+        position: relative;
+
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 47px;
+
+        @media @tablet {
+          width: 60%;
+        }
+
+        @media @mobile_small, @mobile {
+          width: 100%;
+        }
+
+        .video-wrapper {
+          position: relative;
+          padding-bottom: 56.25%; /* 16:9 */
+          padding-top: 9px;
+          height: 0;
+        }
+        .video-wrapper iframe {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+        }
+
+        .exit-btn-container {
+          position: absolute;
+          top: -6rem;
+          right: -6rem;
+          cursor: pointer;
+          padding: 1rem;
+
+          @media @mobile, @mobile_small {
+            top: -6rem;
+            right: 0;
+            padding: 0;
+          }
+
+          transition: transform 0.18s ease-in-out;
+
+          &:hover {
+            transform: rotate(180deg);
+            @media @mobile, @mobile_small {
+              padding-right: 0;
+            }
+          }
+
+
+
+          span {
+            font-size: 2.5rem;
+            font-weight: 400;
+
+          }
+        }
+
+        .tags-wrap {
+          width: 100%;
+          display: flex;
+          flex-flow: row;
+
+          p {
+            font-size: 1.2rem;
+            font-weight: 200;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+}

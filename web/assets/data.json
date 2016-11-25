@@ -1,0 +1,35 @@
+{
+  "home": {
+    "0": {
+      "id": "0",
+      "column": "left",
+      "size": "small"
+    },
+    "1": {
+      "id": "1",
+      "column": "left",
+      "size": "small"
+    },
+    "2": {
+      "id": "2",
+      "column": "right",
+      "size": "big"
+    },
+    "3": {
+      "id": "3",
+      "column": "left",
+      "size": "big"
+    },
+
+    "4": {
+      "id": "4",
+      "column": "right",
+      "size": "small"
+    },
+    "5": {
+      "id": "5",
+      "column": "right",
+      "size": "small"
+    }
+  }
+}
